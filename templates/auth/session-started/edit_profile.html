@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 class="title-page">{% block title %}Edit profile{% endblock %}</h2>
+
+    <form class="form" method="POST">
+        <!-- Campos de formulario-->
+
+
+        <!-- Campo oculto(Protección CSRF) -->
+        {{ token.csrf_token }}
+        {{ token.hidden_tag() }}
+
+        <!-- Mensaje de error -->
+        {% if error %}
+            <div class="flash-error">{{ error }}</div>
+        {% endif %}
+
+        <!-- Datos de usuario -->
+        <input id="name" maxlength="15" minlength="4" name="name" placeholder="Name" required type="text" value="{{ user.name }}" autofocus>
+        <input id="age" max="100" min="12" name="age" placeholder="Age" required type="number" value="{{ user.age }}">
+        <input id="email" maxlength="45" minlength="12" name="email" placeholder="Email" required type="email" value="{{ user.email }}">
+        <input id="username" maxlength="30" minlength="4" name="username" placeholder="Username" required type="text" value="{{ user.username }}">
+
+        <input class="button" type="submit" value="Save changes">
+    </form>
+
+{% endblock %}

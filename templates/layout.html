@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{% block title %}{% endblock %} | DLine</title>
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <h1 class="site-header">DLine</h1>
+            <p class="subtitle-header">Where you can say anything</p>
+        </header>
+        
+        <nav class="nav-menu">
+            {% if 'username' in session and 'password' in session and 'id' in session %}
+                <a class="nav-item" href="{{ url_for('index') }}">Index</a>
+                <a class="nav-item" href="{{ url_for('public_posts') }}">Public posts</a>
+                <a class="nav-item" href="{{ url_for('user_posts') }}">My posts</a>
+                <a class="nav-item" href="{{ url_for('create_post') }}">Create post</a>
+                <a class="nav-item" href="{{ url_for('profile') }}">Profile</a>
+                <a class="nav-item" href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a class="nav-item" href="{{ url_for('index') }}">Index</a>
+                <a class="nav-item" href="{{ url_for('public_posts') }}">Public posts</a>
+                <a class="nav-item" href="{{ url_for('login') }}">Login</a>
+                <a class="nav-item" href="{{ url_for('register') }}">Register</a>            
+            {% endif %}
+        </nav>
+
+
+        <main class="main-content">
+            {% block content %}    
+            {% endblock %}
+        </main>
+    </div>
+</body>
+</html>
