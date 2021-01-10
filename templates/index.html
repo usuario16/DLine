@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <h2 class="title-page">{%block title %}Index{% endblock %}</h2>
+
+
+    <p class="index-content">
+        {% if 'username' in session and 'password' in session and 'id' in session %}
+            Hello {{ username }}! You have logged in on DLine...
+        {% else %}
+            Hello, World! This is DLine, a network where you can share your ideas about any 
+            topics with other people in the world...
+        {% endif %}
+    </p>
+
+
+{% endblock %}

@@ -1,0 +1,378 @@
+/* Estilos generales del sitio */
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #34e89e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+/* Estilos de la cabecera del sitio */
+.main {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0.5em solid rgba(0,0,0,0.9);
+    min-height: 47em;
+    border-radius: 0.5em;
+}
+
+.header > .site-header {
+    margin: 0;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 0.2em;
+    font-size: 2.5em;
+}
+
+.header > .subtitle-header {
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+    color: rgb(61, 61, 61);
+    margin-bottom: 2em;
+}
+
+
+/* Estilos de la barra de navegación */
+.nav-menu {
+    background-color: #0f3443;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-item {
+    border: 0;
+    padding: 1em 1.5em 1em 1.5em;
+    text-align: center;
+    width: auto;
+    color: #fff;
+    margin: 0;
+    transition: 0.365s;
+    font-size: 1.2em;
+}
+
+.nav-item:hover {
+    background-color: #3f5b66;
+}
+
+
+/* 
+Estilos del contenido principal 
+de cada página del sitio 
+*/
+.main-content {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 0.3em;
+}
+
+.title-page {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 1.2em;
+}
+
+.index-content {
+    text-align: justify;
+}
+
+
+/* Public posts */
+.posts-content {
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 0.5em;
+    margin-left: 18%;
+    margin-right: 18%;
+    min-height: 50%;
+    min-width: 50%;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+    margin-bottom: 3em;
+}
+
+.post{
+    text-align: justify;
+    padding: 0.8em;
+
+}
+
+.post-created_by {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.post-title {
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: #fff;
+    background-color: #0f3443;
+}
+
+.post-topic{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.post-content {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.post-created_at {
+    text-align: right;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.green-created-at {
+    background-color: #34e89e;
+}
+
+
+/* User posts */
+.created_by_for_edit {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.box-buttons {
+    text-align: center;
+    margin-top: 1.2em;
+    margin-bottom: 1.1em;
+}
+
+.button-post {
+    display: inline-block;
+    text-align: center;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: red;
+    color: #fff;
+    margin: 0.1em 0.5em 0.1em 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 0.5em;
+    transition: 0.365s;
+}
+
+
+.red{
+    background-color: rgb(122, 0, 0);
+}
+.red:hover {
+    background-color: #f00;
+}
+
+.green {
+    background-color: rgb(0,122,0);
+}
+
+.green:hover {
+    background-color: #0f0;
+}
+
+.blue {
+    background-color: rgb(0, 0, 122);
+}
+
+.blue:hover {
+    background-color: #00f;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.extra-none {
+    padding: 0.5em;
+}
+
+/* EStilos para perfil de usuario */
+.box-user-profile {
+    margin-top: 1.5em;
+    border: 3px solid rgb(85, 26, 100);
+    border-radius: 0.5em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.user-profile{
+    padding: 1em;
+}
+
+.profile-name {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.profile-age {
+    border-bottom: 1px solid rgba(0,0,0,0.2);    
+}
+
+.profile-email {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.profile-username {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content-user-buttons{
+    text-align: right;
+}
+
+.user-button {
+    transition: 0.365s;
+    display: inline-block;
+    padding: 0.7em 1em 0.7em 1em;
+    color: #fff;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+
+.button-edit-profile {
+    background-color: rgb(0,122,0);
+}
+
+.button-change-password {
+    background-color: rgb(130, 0, 0);
+}
+
+.button-edit-profile:hover {
+    background-color: #0f0;
+}
+
+.button-change-password:hover {
+    background-color: #f00;
+}
+
+
+/* Estilos para formularios de usuario */
+.form {
+    padding: 1em;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    margin-right: 10%;
+}
+
+textarea,
+input[type='text'], 
+input[type='number'],
+input[type='email'],
+input[type='password']{
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-width: 50%;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    padding: 0.5em;
+    background-color: rgb(248, 248, 248);
+}
+
+
+.content-create-post {
+    min-height: 15em;
+    resize: none;
+}
+
+select {
+    margin-bottom: 1em;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    font-size: 1em;
+    background-color: rgb(248, 248, 248);
+}
+
+option {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #6fa1da;
+    color: #fff;
+    outline: none;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.recaptcha-message {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.g-recaptcha {
+    margin-bottom: 1em;
+}
+
+.button {
+    border: none;
+    border: 0.5em;
+    padding: 1em 1em 1em 1em;
+    background-color: rgb(14, 151, 14);
+    color: #fff;
+    font-size: 1em;
+    border-radius: 1em;
+    outline: none;
+    cursor: pointer;
+    transition: 0.365s;
+    display: block;
+    margin-top: 1em;
+}
+
+.button:hover {
+    background-color: #0f0;
+}
+
+
+.flash-error {
+    background-color: #f00;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5em;
+    min-width: 50%;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+
+.flash-registered,
+.flash-profile-edited,
+.flash-password-changed,
+.flash-created {
+    background-color: rgb(21, 182, 21);
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5em;
+    min-width: 50%;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 1em;
+    margin-bottom: 1em;
+}

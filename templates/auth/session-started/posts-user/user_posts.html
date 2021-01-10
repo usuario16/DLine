@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 class="title-page">{%block title %}My posts{% endblock %}</h2>
+
+    {% with messages_created = get_flashed_messages() %}
+        {% if messages_created %}
+            {% for message in messages_created %}
+                <div class="flash-created">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+
+    {% for post in posts %}
+            <div class="posts-content">
+                <div class="post post-created_by">Created by: <strong>{{ session['username'] }}</strong></div>
+    
+                <div class="post post-title">{{ post.title }}</div>
+    
+                <div class="post post-topic yellow"><strong>{{ post.topic }}</strong></div>
+                <div class="post post-content">{{ post.content }}</div>
+
+
+                <div class="post post-created_at created_by_for_edit green-created-at">Created at: <strong>{{ post.created_at }}</strong></div>
+            
+                <div class="box-buttons">
+                <a class="post button-post blue" href="{{ url_for('change_public', post_id=post.id) }}">
+                    {% if post.public == 1 %}
+                        Public
+                    {% else %}
+                        Private
+                    {% endif %}
+                </a>
+    
+                
+                    <a class="post button-post green" href="{{ url_for('edit_post', post_id=post.id) }}">Edit post</a>
+                    <a class="post button-post red" href="{{ url_for('delete_post', post_id=post.id) }}">Delete post</a>
+                </div>
+
+            </div>
+    {% endfor %}
+
+{% endblock %}

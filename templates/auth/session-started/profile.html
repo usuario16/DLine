@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 class="title-page">{%block title %}Profile{% endblock %}</h2>
+
+    {% with messages_profile = get_flashed_messages() %}
+        {% if messages_profile %}
+            {% for message in messages_profile %}
+                <div class="flash-profile-edited">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div class="index-content">
+        <p class="user-welcome">
+            Hello {{ user['name'] }}! This is your account...
+        </p>
+        <div class="box-user-profile">
+            <div class="user-profile profile-name"><strong>Name:</strong> {{ user['name'] }}</div>
+            <div class="user-profile profile-age"><strong>Age:</strong> {{ user['age'] }}</div>
+            <div class="user-profile profile-email"><strong>Email:</strong> {{ user['email'] }}</div>
+            <div class="user-profile profile-username"><strong>Username:</strong> {{ user['username'] }}</div>
+            <div class="content-user-buttons">
+                <a class="user-button button-edit-profile" href="{{ url_for('edit_profile', id=user['id']) }}">Edit profile</a>
+                <a class="user-button button-change-password" href="{{ url_for('change_password', id=user['id']) }}">Change password</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

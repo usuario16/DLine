@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 class="title-page">{% block title %}Edit post{% endblock %}</h2>
+
+    <form class="form" method="POST">
+        <!-- Campos de formulario-->
+
+
+        <!-- Campo oculto(Protección CSRF) -->
+        {{ post.csrf_token }}
+        {{ post.hidden_tag() }}
+
+        <!-- Mensaje de error -->
+        {% if error %}
+            <div class="flash-error">{{ error }}</div>
+        {% endif %}
+
+        <!-- Campos para editar el post -->
+        {{ post.title(minlength="8", maxlength="50", value=post_values.title) }}
+        Topic: {{ post.topic(minlength="5", maxlength="25") }}
+        <textarea class="content-create-post" id="content" maxlength="550" minlength="20" name="content" placeholder="Content" required>{{ post_values.content }}</textarea>
+
+
+        {% if post_values.public == 1 %}
+            {{ post.public(checked=True) }}Public
+        {% else %}
+            {{ post.public(checked=False) }}Public
+        {% endif %}
+
+
+        <input class="button" type="submit" value="Save changes">
+    </form>
+
+{% endblock %}

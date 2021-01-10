@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 class="title-page">{% block title %}Register user{% endblock %}</h2>
+
+    <form class="form" method="POST">
+        <!-- Campos de formulario-->
+
+
+        <!-- Campo oculto(Protección CSRF) -->
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+
+        <!-- Mensaje de error -->
+        {% if error %}
+            <div class="flash-error">{{ error }}</div>
+        {% endif %}
+
+        <!-- Datos de usuario -->
+        {{ form.name(minlength="4", maxlength="15", autofocus=True) }}
+        {{ form.age(type='number', min="12", max="100") }}
+        {{ form.email(minlength="12", maxlength="45") }}
+        {{ form.username(minlength="4", maxlength="30") }}
+        {{ form.password(minlength="8", maxlength="20") }}
+        {{ form.password_confirm(minlength="8", maxlength="20") }}
+
+        <!-- Campo de reCAPTCHA -->
+        <strong class="recaptcha-message">To register your user you must click on the reCAPTCHA</strong>
+        {{ form.recaptcha }}
+
+        <input class="button" type="submit" value="Register">
+    </form>
+
+{% endblock %}

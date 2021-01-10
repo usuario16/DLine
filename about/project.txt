@@ -1,0 +1,89 @@
+----------------------- ABOUT PROJECT -----------------------
+-
+- NOMBRE PROYECTO: DLine
+-
+- TAMAÑO DE PROYECTO: Pequeño.
+-
+- FINALIDAD: Ser un sitio web que permita a los usuarios
+- registrarse, iniciar sesión, crear contenido escrito y 
+- compartir este con el resto de usuarios.
+- 
+- TEGNOLOGIAS: HTML5, CSS, Python(Flask) y SQLite3.
+-
+- NIVEL DE SEGURIDAD: Baja.
+- SEGURIDAD IMPLMENTADA: Protección contra CSRF.
+-
+-------------------------------------------------------------
+-
+- PERMISOS DE USUARIO ANONIMO:
+- El usuario anonimo sólo podra ver el contenido que crean
+- el resto de usuarios. Para participar en la creación de 
+- este, deberá registrarse e iniciar sesión en el sitio.
+-
+- * No puede cerrar sesión.
+- * Sólo podrá visualizar las ventanas de inicio, contenido,
+- y formularios de inicio de sesión y registro de usuario.
+-
+-------------------------------------------------------------
+-
+- VETANAS DE USUARIO ANONIMO:
+-
+- * Inicio:
+- * Contenido de otros usuarios:
+- * Inicio de sesión:
+- * Registro de usuario:
+-
+-------------------------------------------------------------
+-
+- PERMISOS DE USUARIO REGISTRADO:
+- El usuario registrado podra ver crear editar y eliminar 
+- sus propias publicaciones. También podrá ver el contenido 
+- que suben el resto de los usuarios.
+-
+-
+- * El usuario tendrá la opción de eliminar su propia cuenta,
+- lo cual no tiene vuelta atras una vez hecho.
+- * Si el usuario pierde su contraseña, no podrá recuperar 
+- su cuenta.
+- * No podrá iniciar sesión, ni registrarse, si ya lo hizo.
+- * Sólo tendrá la opcion de cerrar sesión.
+- * Sólo podrá visualizar las siguientes ventanas: De su
+- porpio perfil, del contenido de otros usuarios en la red, 
+- y, también, de un formulario que le permite crear contenido.
+-
+--------------------------------------------------------------
+-
+- VETANAS DE USUARIO REGISTRADO:
+-
+- * Del perfil propio:
+- * Contenido de otros usuarios:
+- * Para creación de contenido: 
+-
+-------------------------------------------------------------
+-
+- DATOS SOLICITADOS PARA EL REGISTRO:
+- * Nombre
+- * Edad
+- * Correo
+- * Nombre de usuario
+- * Contraseña
+- * Confirmar contraseña
+-
+-------------------------------------------------------------
+-
+- CAMPOS PARA CREAR POSTS:
+- * Título.
+- * Temática(Secciones: Tegnología, Ciencias, Música, 
+- Literatura, Historia, Películas y Deportes)
+- * Privada o no(Checkbox: Determina si el resto de usuarios 
+- pueden ver la publcación).
+- * Contenido.
+- * Fecha de creación: Se almacena automáticamente en la base 
+- de datos.
+-
+-------------------------------------------------------------
+-
+- * Cualquier usuario que cierre sesión pasará a ser un 
+- usuario anónimo en el sitio.
+-
+-------------------------------------------------------------

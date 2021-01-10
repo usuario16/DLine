@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 class="title-page">{% block title %}Create post{% endblock %}</h2>
+
+    <form class="form" method="POST">
+        <!-- Campos de formulario-->
+
+
+        <!-- Campo oculto(Protección CSRF) -->
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+
+        <!-- Mensaje de error -->
+        {% if error %}
+            <div class="flash-error">{{ error }}</div>
+        {% endif %}
+
+        <!-- Datos del post -->
+        {{ form.title(minlength="8", maxlength="50", autofocus=True) }}
+        Topic: {{ form.topic(minlength="5", maxlength="25") }}
+        {{ form.content(minlength="20", maxlength="550", class='content-create-post') }}
+        {{ form.public }}Public
+
+        <!-- Campo de reCAPTCHA -->
+        <strong class="recaptcha-message">To create your post you must click on the reCAPTCHA</strong>
+        {{ form.recaptcha }}
+
+        <input class="button" type="submit" value="Create post">
+    </form>
+
+{% endblock %}

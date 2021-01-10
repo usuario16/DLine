@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+<!-- Esto es una template para el publico -->
+
+{% block content %}
+
+
+    <h2 class="title-page">{%block title %}Publications{% endblock %}</h2>
+
+
+    {% for post in posts %}
+        <div class="posts-content">
+            <div class="post post-created_by">Created by: <strong>{{ coincidence_user_post(post.user_id) }}</strong></div>
+
+            <div class="post post-title">{{ post.title }}</div>
+
+            <div class="post post-topic yellow"><strong>{{ post.topic }}</strong></div>
+            <div class="post post-content">{{ post.content }}</div>
+
+            <div class="post post-created_at green-created-at">Created at: <strong>{{ post.created_at }}</strong></div>
+            <div class="post extra-none"></div>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
