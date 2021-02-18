@@ -16,8 +16,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '819cb36b0994a6d14e1ee16ca6d31e0abf0e92586e1fcda7d3310d58f5e7dae3cd8177ca8bc57b6cbd4349a8273a1be977b9f70e183b7c39cf04c0a854144620'
 app.config['WTF_CSRF_SECRET_KEY'] = '6cab0b8ff2de3ecc1c64e4e9cea8dc749d5ab8ad518ec72b193b8e92735e62e19a273724f3980d9672157bec384c4af9504baa3f0a6cf33ed8f36b0e76c815f2'
 
-app.config['RECAPTCHA_PUBLIC_KEY'] = '6LdO7yEaAAAAANEKGwoKmyUcPIXJUZ4bsKpX0YZe'
-app.config['RECAPTCHA_PRIVATE_KEY'] = '6LdO7yEaAAAAAK0bQivufKg2jDJXWQ_rYy-LJh3Q'
+app.config['RECAPTCHA_PUBLIC_KEY'] = ''
+app.config['RECAPTCHA_PRIVATE_KEY'] = ''
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/DLine.db'
 
